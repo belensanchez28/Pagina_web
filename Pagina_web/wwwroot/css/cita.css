@@ -1,0 +1,122 @@
+﻿/* FONDO GENERAL */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fdf2f8, #fce7f3);
+}
+
+/* CONTENEDOR */
+.seccion-amor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CAJA DEL VERSÍCULO */
+.caja-versiculo {
+    background: white;
+    padding: 50px;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+    animation: aparecer 1.5s ease;
+}
+
+/* TEXTO */
+.versiculo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #6b4c57;
+    line-height: 1.8;
+}
+
+.referencia {
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #d63384;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CORAZONES */
+.corazones {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+    /* CADA CORAZÓN */
+    .corazones span {
+        position: absolute;
+        display: block;
+        font-size: 20px;
+        animation: flotar 10s linear infinite;
+        opacity: 0.6;
+    }
+
+        /* POSICIONES DIFERENTES */
+        .corazones span:nth-child(1) {
+            left: 10%;
+            animation-duration: 8s;
+        }
+
+        .corazones span:nth-child(2) {
+            left: 25%;
+            animation-duration: 12s;
+        }
+
+        .corazones span:nth-child(3) {
+            left: 40%;
+            animation-duration: 10s;
+        }
+
+        .corazones span:nth-child(4) {
+            left: 60%;
+            animation-duration: 14s;
+        }
+
+        .corazones span:nth-child(5) {
+            left: 75%;
+            animation-duration: 9s;
+        }
+
+        .corazones span:nth-child(6) {
+            left: 90%;
+            animation-duration: 11s;
+        }
+
+/* ANIMACIÓN FLOTAR */
+@keyframes flotar {
+    0% {
+        bottom: -50px;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        bottom: 100%;
+        transform: translateX(-20px);
+    }
+}
